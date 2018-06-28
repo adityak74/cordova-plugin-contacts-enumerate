@@ -1,0 +1,31 @@
+// @flow
+
+export type AppleCNContactKeyBirthday = 'birthday';
+export type AppleCNContactKeyDates = 'dates';
+export type AppleCNContactKeyDepartmentName = 'departmentName';
+export type AppleCNContactKeyEmailAddresses = 'emailAddresses';
+export type AppleCNContactKeyFamilyName = 'familyName';
+export type AppleCNContactKeyGivenName = 'givenName';
+export type AppleCNContactKeyIdentifier = 'identifier';
+export type AppleCNContactKeyImageDataAvailable = 'imageDataAvailable';
+export type AppleCNContactKeyImageData = 'imageData';
+export type AppleCNContactKeyInstantMessageAddresses = 'instantMessageAddresses';
+export type AppleCNContactKeyJobTitle = 'jobTitle';
+export type AppleCNContactKeyMiddleName = 'middleName';
+export type AppleCNContactKeyNamePrefix = 'namePrefix';
+export type AppleCNContactKeyNameSuffix = 'nameSuffix';
+export type AppleCNContactKeyNickname = 'nickname';
+export type AppleCNContactKeyNonGregorianBirthday = 'nonGregorianBirthday';
+export type AppleCNContactKeyOrganizationName = 'organizationName';
+export type AppleCNContactKeyPhoneNumbers = 'phoneNumbers';
+export type AppleCNContactKeyPhoneticFamilyName = 'phoneticFamilyName';
+export type AppleCNContactKeyPhoneticGivenName = 'phoneticGivenName';
+export type AppleCNContactKeyPhoneticMiddleName = 'phoneticMiddleName';
+export type AppleCNContactKeyPhoneticOrganizationName = 'phoneticOrganizationName';
+export type AppleCNContactKeyPostalAddresses = 'postalAddresses';
+export type AppleCNContactKeyPreviousFamilyName = 'previousFamilyName';
+export type AppleCNContactKeyRelations = 'contactRelations';
+export type AppleCNContactKeySocialProfiles = 'socialProfiles';
+export type AppleCNContactKeyThumbnailImageData = 'thumbnailImageData';
+export type AppleCNContactKeyType = 'contactType';
+export type AppleCNContactKeyUrlAddresses = 'urlAddresses';

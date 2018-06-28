@@ -1,0 +1,4 @@
+*.log
+.babelrc
+.flowconfig
+test

@@ -1,0 +1,56 @@
+{
+  "name": "@silverstreet/cordova-plugin_apple_cn-contact-store_enumerate-contacts",
+  "description": "Cordova plugin implementing the Apple CNContactStore enumerateContacts method",
+  "version": "0.0.1",
+  "author": {
+    "email": "admin@eplata.com",
+    "name": "ePlata",
+    "url": "https://www.eplata.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/adityak74/cordova-plugin-contacts-enumerate/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.2",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-stage-0": "6.24.1",
+    "eslint": "4.18.2",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-flowtype": "2.46.1",
+    "eslint-plugin-import": "2.11.0",
+    "fixpack": "2.3.1",
+    "flow-bin": "0.67.1",
+    "npm-run-all": "4.1.2",
+    "nsp": "3.2.1"
+  },
+  "homepage": "https://github.com/adityak74/cordova-plugin-contacts-enumerate",
+  "keywords": [
+    "apple",
+    "contacts",
+    "cordova",
+    "enumerate",
+    "plugin",
+    "silverstreet"
+  ],
+  "license": "UNLICENSED",
+  "main": "src/web/js/code/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adityak74/cordova-plugin-contacts-enumerate"
+  },
+  "scripts": {
+    "audit": "nsp check",
+    "check": "npm-run-all audit fixpack lint typecheck",
+    "fixpack": "fixpack",
+    "lint": "npm-run-all lint:js lint:swift",
+    "lint:js": "eslint .",
+    "lint:swift": "mint run realm/SwiftLint",
+    "test": "nyc ava",
+    "typecheck:js": "flow check"
+  }
+}

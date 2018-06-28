@@ -1,0 +1,7 @@
+{
+  "presets": [
+    ["env", { "loose": true }],
+    ["flow"],
+    ["stage-0", { "loose": true }]
+  ]
+}

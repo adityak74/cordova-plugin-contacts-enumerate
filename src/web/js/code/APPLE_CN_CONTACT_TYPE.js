@@ -1,0 +1,4 @@
+// @flow
+
+export const APPLE_CN_CONTACT_TYPE_PERSON = 0;
+export const APPLE_CN_CONTACT_TYPE_ORGANIZATION = 1;
