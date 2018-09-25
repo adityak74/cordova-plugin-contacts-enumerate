@@ -1,12 +1,14 @@
-import * as iOSContacts from '../src/ios/web/js/code/index';
-import * as androidContacts from '../src/android/web/js/code/index';
+var iOSContacts = require('../src/ios/web/js/code/index');
+var androidContacts = require('../src/android/web/js/code/index');
 
-const contactsInit = () => {
-  if (iOSContacts || androidContacts) {
-    return true;
-  } else {
-    return false;
+module.exports = function(context) {
+  var platformContactsPluginModule;
+  var platforms = context.requireCordovaModule('cordova-lib/src/cordova/util').listPlatforms(context.opts.projectRoot);
+
+  if (platforms.indexOf('android') >= 0) {
+    platformContactsPluginModule = androidContacts;
+  } else if (platforms.indexOf('ios') >= 0) {
+    platformContactsPluginModule = iOSContacts;
   }
+  return platformContactsPluginModule;
 };
-
-module.exports = contactsInit;
