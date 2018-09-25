@@ -1,6 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin_apple_cn-contact-store_enumerate-contacts" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-  <name>AppleCNContactStoreEnumerateContacts</name>
+<plugin id="cordova-plugin_apple_cn-contact-store_enumerate-contacts" 
+  version="1.0.0" 
+  xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <name>EnumerateContacts - Cordova Contacts Plugin</name>
+  <description>EnumerateContacts - Cordova Contacts Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,contacts, enumerate</keywords>
+  <repo>https://github.com/adityak74/cordova-plugin-contacts-enumerate.git</repo>
+  <issue>https://github.com/adityak74/cordova-plugin-contacts-enumerate/issues</issue>
+
+  <engines>
+      <engine name="cordova-android" version=">=6.3.0" />
+  </engines>
+
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
       <feature name="AppleCNContactStoreEnumerateContacts">
@@ -11,6 +25,19 @@
       <string>$CONTACTS_USAGE_DESCRIPTION</string>
     </config-file>
     <framework src="Contacts.framework" weak="true" />
-    <source-file src="src/native/swift/code/AppleCNContactStoreEnumerateContacts.swift" />
+    <source-file src="src/ios/native/swift/code/AppleCNContactStoreEnumerateContacts.swift" />
+  </platform>
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AndroidContentResolverQuery">
+        <param name="android-package" value="io.silverstreet.content_resolver.query.AndroidContentResolverQuery"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.READ_CONTACTS" />
+      <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+      <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    </config-file>
+    <source-file src="src/android/native/java/code/AndroidContentResolverQuery.java" target-dir="src/io/silverstreet/content_resolver/query" />
   </platform>
 </plugin>

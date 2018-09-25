@@ -37,7 +37,7 @@
     "silverstreet"
   ],
   "license": "UNLICENSED",
-  "main": "src/web/js/code/index.js",
+  "main": "www/contacts.js",
   "private": true,
   "repository": {
     "type": "git",

@@ -1,27 +1,30 @@
 // @flow
 
-import type { AppleCNContact } from '../types/flow/AppleCNContact';
-import type { AppleCNContactFetchRequest } from '../types/flow/AppleCNContactFetchRequest';
-
-type CallbackNext = (contact: AppleCNContact) => void;
+type CallbackNext = (result: any) => void;
 type CallbackError = (err: Error) => void;
 type CallbackComplete = () => void;
 
-const pluginName = 'AppleCNContactStoreEnumerateContacts';
+const pluginName = 'AndroidContentResolverQuery';
 const pluginFnName = 'start';
+
+const MESSAGE_TYPE_NULL = 5;
 
 export default (
   cordova: any,
   id: string,
-  req: AppleCNContactFetchRequest,
+  uri: string,
+  projection: string[],
+  selection: string,
+  selectionArgs: string[],
+  sortOrder: string,
   cbNext?: ?CallbackNext,
   cbError?: ?CallbackError,
   cbComplete?: ?CallbackComplete,
 ) => {
-  const onResult = (contact: ?AppleCNContact) => {
-    if (contact) {
-      if (cbNext) cbNext(contact);
-    } else {
+  const onResult = (result: ?any) => {
+    if (result && result != MESSAGE_TYPE_NULL) {
+      if (cbNext) cbNext(result);
+    } else if (result == MESSAGE_TYPE_NULL) {
       if (cbComplete) cbComplete();
     }
   };
@@ -36,6 +39,6 @@ export default (
     onError,
     pluginName,
     pluginFnName,
-    [id, req],
+    [id, uri, projection, selection, selectionArgs, sortOrder],
   );
 };

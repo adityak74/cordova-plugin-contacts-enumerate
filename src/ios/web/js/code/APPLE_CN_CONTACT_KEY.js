@@ -15,6 +15,7 @@ export const APPLE_CN_CONTACT_KEY_MIDDLE_NAME = 'middleName';
 export const APPLE_CN_CONTACT_KEY_NAME_PREFIX = 'namePrefix';
 export const APPLE_CN_CONTACT_KEY_NAME_SUFFIX = 'nameSuffix';
 export const APPLE_CN_CONTACT_KEY_NICKNAME = 'nickname';
+export const APPLE_CN_CONTACT_KEY_NOTE = "note";
 export const APPLE_CN_CONTACT_KEY_NON_GREGORIAN_BIRTHDAY = 'nonGregorianBirthday';
 export const APPLE_CN_CONTACT_KEY_ORGANIZATION_NAME = 'organizationName';
 export const APPLE_CN_CONTACT_KEY_PHONE_NUMBERS = 'phoneNumbers';
